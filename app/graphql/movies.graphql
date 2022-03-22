@@ -1,0 +1,22 @@
+query GetMovies($page: Int, $perPage: Int) {
+  Page(page: $page, perPage: $perPage) {
+    media {
+      siteUrl
+      coverImage {
+        large
+      }
+      title {
+        english
+        native
+      }
+      description
+    }
+    pageInfo {
+      total
+      perPage
+      currentPage
+      lastPage
+      hasNextPage
+    }
+  }
+}
